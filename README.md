@@ -1,7 +1,38 @@
-# MovieRecommendation_Scala_Spark_AWS_EMR
+Project Title
+A Movie Recommendation Engine with Spark ML on Amazon EMR
 
-We have developed a movie recommendation engine which would recommend movies to users, based on the ratings provided by other users. Recommendation systems are a very integral part of e-commerce websites as well as other service providers like online streaming (Netflix, Prime Video, etc) and many others. 
+Getting Started
+Need to download JaiswalRodeShahShah.zip file which consist of 
+- Executable MOVIE.Jar file under /target/scala-2.10
+- personalRating.txt file
 
-Amazon has its own recommendation system which we often tend to use (“People who bought this also bought these items”). Netflix recommends movies based on preferred genres and ratings by users. There are multiple methods for recommendation - Content based, Collaborative and Hybrid methods. Content based methods use all the information about a particular user to customize the services offered. Collaborative methods assume that similar users prefer similar items. And Hybrid methods make use of both above mentioned models to achieve recommendation system. 
+Prerequisites
+- We have run this code on AWS EMR configured of Spark 2.3 using 2.11 version.
+- Download the Dataset from https://drive.google.com/drive/u/1/folders/1wmnQbJwVqPM7d4KJd9Fw5rPZXZZBqmJ4?ogsrc=32.
 
-In this project, we will be focusing on the Collaborative systems. In order to do that, we would need to preprocess the data, use machine learning algorithm to operate on the data, evaluate the model and test the system. The final product of the project will be system which would recommend a list of movies to user based on his/her input.
+Installing
+
+1) Create S3 bucket on AWS.
+2) Copy all the dataset and Jar file on S3 bucket.
+3) Congigured AWS EMR with Spark Version 2.10.
+4) Follow the instruction of SSH after creating a cluster on AWS to connect AWS EMR from local machine.
+5) Copy all the files from S3 to EMR cluster using aws s3 cp s3://<bucketname>/<files> <local path of cluster>
+6) Copy all the Dataset files to Hadoop DFS of EMR using hdfs dfs -put <local path of data files> <HDFS file location>
+7) For ALS : 
+	"spark-submit --class MovieLensALS MOVIES.jar <HDFS path dir> personalRatings.txt"
+8) For CosineSimilarities :
+	"spark-submit --class ItemSimiarities_new MOVIES.jar <movieID for which we need recommendation>"
+
+
+Build 
+We use SBT to build the jar files consist of 2 classes.
+
+Authors
+Darshan Shah
+Shashikant Jaiswal
+Parays Rode
+Ashay Shah
+
+Report Link
+https://webpages.uncc.edu/prode1/
+
