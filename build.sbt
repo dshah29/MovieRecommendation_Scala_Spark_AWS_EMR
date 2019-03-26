@@ -1,11 +1,11 @@
-name := "MovieSimilarities1M"
+name := "MovieSimilarities_new"
 
-version := "1.0"
+version := "0.1"
 
 organization := "com"
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.10.4"
 
-libraryDependencies ++= Seq(
-"org.apache.spark" %% "spark-core" % "2.0.0" % "provided"
-)
+libraryDependencies += "org.apache.spark" % "spark-mllib_2.10" % "1.1.0" % "provided"
+
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.2.0" % "provided"
