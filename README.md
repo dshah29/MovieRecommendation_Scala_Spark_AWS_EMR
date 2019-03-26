@@ -3,7 +3,7 @@ A Movie Recommendation Engine with Spark ML on Amazon EMR
 
 Getting Started
 Need to download JaiswalRodeShahShah.zip file which consist of 
-- Executable MOVIE.Jar file under /target/scala-2.10
+- Executable MOVIE.Jar file
 - personalRating.txt file
 
 Prerequisites
