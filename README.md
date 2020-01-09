@@ -24,7 +24,7 @@ Installing
 	"spark-submit --class ItemSimiarities_new MOVIES.jar <movieID for which we need recommendation>"
 
 
-Build 
+Build :- 
 We use SBT to build the jar files consist of 2 classes.
 
 Authors
