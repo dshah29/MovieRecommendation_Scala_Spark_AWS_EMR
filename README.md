@@ -28,10 +28,10 @@ Build
 We use SBT to build the jar files consist of 2 classes.
 
 Authors
-Darshan Shah
-Shashikant Jaiswal
-Parays Rode
-Ashay Shah
+- Darshan Shah
+- Shashikant Jaiswal
+- Parays Rode
+- Ashay Shah
 
 Report Link
 https://webpages.uncc.edu/prode1/
