@@ -14,7 +14,7 @@ Installing
 
 1) Create S3 bucket on AWS.
 2) Copy all the dataset and Jar file on S3 bucket.
-3) Congigured AWS EMR with Spark Version 2.10.
+3) Configured AWS EMR with Spark Version 2.10 or later.
 4) Follow the instruction of SSH after creating a cluster on AWS to connect AWS EMR from local machine.
 5) Copy all the files from S3 to EMR cluster using aws s3 cp s3://<bucketname>/<files> <local path of cluster>
 6) Copy all the Dataset files to Hadoop DFS of EMR using hdfs dfs -put <local path of data files> <HDFS file location>
